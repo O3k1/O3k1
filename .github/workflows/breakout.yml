@@ -1,4 +1,3 @@
-
 name: Generate Brick Breaker
 
 on:
@@ -9,31 +8,35 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate Brick Breaker SVGs
-        uses: cyprieng/github-breakout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          github_username: O3k1
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          paddle_color: "#7F00FF"
-          ball_color: "#7F00FF"
+          node-version: "20"
 
-      - name: Deploy SVGs to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: output
-          keep_history: false
+      - name: Generate Breakout SVGs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx github-breakout ${{ github.repository_owner }} --token "$GITHUB_TOKEN" --paddle-color "#7F00FF" --ball-color "#7F00FF"
+
+      - name: Deploy to output branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan output-temp
+          git rm -rf .
+          mv output/*.svg .
+          rm -rf output
+          git add *.svg
+          git commit -m "Update Brick Breaker SVGs"
+          git branch -M output
+          git push origin output --force
