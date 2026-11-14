@@ -1,4 +1,4 @@
-## Hi there 👋
+<h1>Hi there! <img src="https://iam-weijie.github.io/wave/hand-emoji.svg" width="30px" height="30px" alt="Waving hand" /></h1>
 
 <!--
 **O3k1/O3k1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,8 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+<div align="center"> 
+  <p>Visitor count</p>
+  <img src="https://profile-counter.glitch.me/O3k1/count.svg" alt="Visitor's Count" />
+</div>
