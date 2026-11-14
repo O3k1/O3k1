@@ -25,7 +25,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-Hi, I'm **Obashola** (aka **sholly** / **O3k1**), though most people call me **Oba** 👋🏽
+Hi, I'm **Obashola** (aka **sholly**/**O3k1**), though most people call me **Oba** 👋🏽
 
 - 💼 I'm currently a full-time Associate Patent Examiner in Computing & Telecoms at the UK Intellectual Property Office.
 - 🎓 I hold a BEng (Hons) in **Cyber Security** and I am pursuing an **MSc in Science, Technology, Engineering and Public Policy (STEaPP)** [@UCL](https://www.ucl.ac.uk/).
