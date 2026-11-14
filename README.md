@@ -75,10 +75,10 @@ Hi, I'm **Obashola** (aka **sholly** / **O3k1**), though most people call me **O
 <br>
 
 <div align="center">
-  <img width="390" src="https://github-readme-stats-fast.vercel.app/api?username=O3K1&theme=transparent&show_icons=true&rank_icon=github&title_color=7F00FF&icon_color=7F00FF&text_color=c9d1d9&border_radius=10&locale=en" alt="Oba's GitHub Stats" />
-  <img width="390" src="https://github-readme-streak-stats.herokuapp.com/?user=O3K1&theme=transparent&border_radius=10&ring=7F00FF&fire=7F00FF&currStreakLabel=7F00FF&sideNums=c9d1d9&currStreakNum=c9d1d9&dates=8b949e&locale=en" alt="O3K1's GitHub Streak" />
+  <img width="390" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=O3k1&theme=transparent" alt="Oba's GitHub Stats" />
+  <img width="390" src="https://github-readme-streak-stats.herokuapp.com/?user=O3k1&theme=transparent&border_radius=10&ring=7F00FF&fire=7F00FF&currStreakLabel=7F00FF&sideNums=c9d1d9&currStreakNum=c9d1d9&dates=8b949e&locale=en" alt="O3k1's GitHub Streak" />
   <br>
-  <img width="325" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=O3K1&theme=transparent&layout=donut&hide=css&langs_count=8&title_color=7F00FF&text_color=c9d1d9&border_radius=10&locale=en" alt="Oba's Most Used Languages" />
+  <img width="325" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=O3k1&theme=transparent" alt="Oba's Most Used Languages" />
 </div>
 
 <hr>
