@@ -1,4 +1,7 @@
-<h1>Hi there! <img src="https://iam-weijie.github.io/wave/hand-emoji.svg" width="30px" height="30px" alt="Waving hand" /></h1>
+<h1>Hi there! <picture>
+  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fd/512.webp" type="image/webp">
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fd/512.gif" alt="👋" width="50" height="50">
+</picture></h1>
 
 <!--
 **O3k1/O3k1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -15,7 +18,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<div align="center"> 
-  <p>Visitor count</p>
-  <img src="https://profile-counter.glitch.me/O3k1/count.svg" alt="Visitor's Count" />
-</div>
+<img src="https://komarev.com" alt="Visitor Count" />
