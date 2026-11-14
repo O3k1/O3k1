@@ -20,5 +20,5 @@ Here are some ideas to get you started:
 
 <div align="center">
   <p>Visitor count</p>
-  <img src="https://komarev.com" alt="Visitor Count" />
+  <img src="https://komarev.com/ghpvc/?username=O3k1" alt="Visitor Count" />
 </div>
