@@ -2,44 +2,36 @@ name: Generate Brick Breaker
 
 on:
   schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+    - cron: "0 * * * *" # Runs automatically every hour to sync new commits
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  generate-svg:
+  build:
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Generate SVG
-        uses: cyprieng/github-breakout@v1.2.4
+      - uses: MakdumIbrohim/generate-brick-breaker@main
         with:
-          github_username: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          paddle_color: "#7F00FF"
-          ball_color: "#7F00FF"
-          bricks_colors: "#2d0066,#4c0099,#6600cc,#7F00FF,#b366ff"
+          github_user: ${{ github.repository_owner }}
+          output_path: game.svg
+          ball_skin: classic
+          theme: classic
+          paddle_skin: cyber
+          brick_color: '#7F00FF'
+          ball_speed: normal
 
-      - name: Move generated SVGs to temp
-        run: |
-          mkdir -p /tmp/breakout-images
-          mv output/*.svg /tmp/breakout-images/
-
-      - name: Push SVGs to output branch
+      - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout --orphan output
-          git rm -rf .
-          mv /tmp/breakout-images/*.svg .
-          git add *.svg
-          git commit -m "chore: update GitHub breakout SVGs"
-          git push --force origin output
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update brick breaker assets"
+          git pull --rebase --autostash origin main || true
+          git push origin main
