@@ -87,3 +87,7 @@ Hi, I'm **Obashola** (aka **sholly** / **O3k1**), though most people call me **O
   <p>Visitor count:</p>
   <img src="https://komarev.com/ghpvc/?username=O3k1&color=7F00FF" alt="Visitor Count" />
 </div>
+
+<p align="center">
+  <img src="game.svg" alt="Brick Breaker Game" />
+</p>
